@@ -11,7 +11,7 @@ authors = [
 description = "A short description of your package"
 readme = "README.md"
 license = {text = "MIT"}
-version = "0.0.1"
+version = "0.0.2"
 
 [tool.pyright]
 include = ["src"]

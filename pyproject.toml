@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reifel-pkg"
+requires-python = ">=3.7.1"
+authors = [
+    {name = "Rafael Leao", email = "rslgp@cin.ufpe.br"},
+]
+description = "A short description of your package"
+readme = "README.md"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+dynamic = ["version"]
+
+[tool.pyright]
+include = ["src"]
+exclude = [
+    "**/node_modules",
+    "**/__pycache__",
+]
+venv = "env37"
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+pythonVersion = "3.7"
+pythonPlatform = "Linux"
+
+executionEnvironments = [
+  { root = "src" }
+]
+
